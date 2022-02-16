@@ -40,7 +40,7 @@ namespace _04_monitor
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Lock Sync:");
+            Console.WriteLine($"Lock Sync:");
             LockCounter c = new LockCounter();
 
             Thread[] threads = new Thread[5];

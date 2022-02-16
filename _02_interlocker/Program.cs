@@ -32,8 +32,6 @@ namespace _02_interlocker
                     for (int j = 1; j <= 1_000_000; ++j)
                     {
                         Interlocked.Increment(ref Counter.count);
-                        Interlocked.Increment(ref Counter.count);
-                        Interlocked.Increment(ref Counter.count);
                     }
                 });
                 threads[i].Start();
