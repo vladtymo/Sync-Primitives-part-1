@@ -36,9 +36,9 @@ namespace _03_monitor
                 for (int i = 0; i < 1_000_000; ++i)              
                 {
                     // lock this
-                    Interlocked.Increment(ref number);    // 2
+                    Interlocked.Increment(ref number);
                     if (number % 2 == 0)
-                        Interlocked.Increment(ref even);  // 2
+                        Interlocked.Increment(ref even);
                     // unlock this
                 }
             }
@@ -124,8 +124,8 @@ namespace _03_monitor
         #endregion
         static void Main(string[] args)
         {
-            //BadAsync();
-            GoodAsync();
+            BadAsync();
+            //GoodAsync();
         }
     }
 }
