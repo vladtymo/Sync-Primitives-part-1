@@ -46,6 +46,19 @@ namespace _05_lock_static
             for (int i = 0; i < threads.Length; ++i)
                 threads[i].Join();
             Console.WriteLine("Field1: {0}, Field2: {1}\n\n", StaticLockCounter.Field1, StaticLockCounter.Field2);
+
+            // Benckmark
+            //Console.WriteLine("Press any key to create a new thread...");
+            //while (Console.ReadKey().Key != ConsoleKey.Escape)
+            //{
+            //    Thread th = new Thread(() =>
+            //    {
+            //        while (true)
+            //            new Random().Next().ToString();
+            //    });
+            //    th.Start();
+            //    Console.WriteLine("Thread started!");
+            //}
         }
     }
 }

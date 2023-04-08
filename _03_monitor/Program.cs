@@ -68,7 +68,7 @@ namespace _03_monitor
             for (int i = 0; i < threads.Length; ++i)
                 threads[i].Join();
 
-            Console.WriteLine("Field1: {0}, Field2: {1}\n\n", c.Number, c.Even);
+            Console.WriteLine("Field1: {0}, Field2: {1}\n\n", c.Number, c.Even); // 5_000_000 2_500_000
         }
         #endregion
         #region Sync with Monitor
@@ -124,8 +124,8 @@ namespace _03_monitor
         #endregion
         static void Main(string[] args)
         {
-            BadAsync();
-            //GoodAsync();
+            //BadAsync();
+            GoodAsync();
         }
     }
 }
