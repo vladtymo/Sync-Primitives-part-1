@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace _06_practice_1
@@ -28,14 +29,15 @@ namespace _06_practice_1
 
                 string text = File.ReadAllText(file);
 
-                //Thread thread = new Thread(TextAnalyse);
-                Task.Run(() => TextAnalyse(text, statistic));
+                Thread thread = new Thread(TextAnalyse);
+                thread.Start(statistic);
+                //Task.Run(() => TextAnalyse(text, statistic));
             }        
 
             // show total statistic
         }
 
-        static void TextAnalyse(string text, Stat stat)
+        static void TextAnalyse(object stat)
         {
             // text analyse how many letters, digits etc.
 
