@@ -21,8 +21,8 @@ namespace _03_monitor
         #region Sync with Interlocker
         class InterlockedCounter
         {
-            int number = 0;     // 3
-            int even = 0;       // 0
+            int number = 0;     // 2
+            int even = 0;       // 1
             public int Number
             {
                 get { return number; }

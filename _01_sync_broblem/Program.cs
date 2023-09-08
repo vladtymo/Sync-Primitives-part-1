@@ -21,7 +21,9 @@ namespace _01_sync_broblem
     */
     class Counter
     {
-        public static int count = 0; 
+        public static int count = 0; // 0 -> 1
+                                     // 0 -> 1
+                                     // 1 -> 1
     }
     class Program
     {

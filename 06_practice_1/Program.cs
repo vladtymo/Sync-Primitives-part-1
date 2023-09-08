@@ -21,16 +21,25 @@ namespace _06_practice_1
 
             foreach (var file in files)
             {
+                // ------------ read text
+                // 1
                 //FileStream fs = new FileStream(file, FileMode.Open);
                 //fs.Read
 
+                // 2
                 //StreamReader sr = new StreamReader(file);
                 //sr.ReadToEnd();
 
+                // 3
                 string text = File.ReadAllText(file);
 
+                // ------------ start thread
+                // 1
                 Thread thread = new Thread(TextAnalyse);
                 thread.Start(statistic);
+                // 2
+                //ThreadPool.QueueUserWorkItem(TextAnalyse, statistic);
+                // 3
                 //Task.Run(() => TextAnalyse(text, statistic));
             }        
 
@@ -40,7 +49,6 @@ namespace _06_practice_1
         static void TextAnalyse(object stat)
         {
             // text analyse how many letters, digits etc.
-
         }
     }
 }
