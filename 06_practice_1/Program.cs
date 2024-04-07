@@ -11,6 +11,19 @@ namespace _06_practice_1
         public int Digits { get; set; }
         //...
     }
+
+    // Ways to read text from file
+    /* 1 - using FileStream
+     * FileStream fs = new FileStream(file, FileMode.Open);
+     * fs.Read
+      
+       2 - using StreamReader
+     * StreamReader sr = new StreamReader(file);
+     * sr.ReadToEnd();
+      
+       3 - using File.ReadAllText
+     * string text = File.ReadAllText(file);
+     */
     class Program
     {
         static void Main(string[] args)
@@ -21,14 +34,6 @@ namespace _06_practice_1
 
             foreach (var file in files)
             {
-                //FileStream fs = new FileStream(file, FileMode.Open);
-                //fs.Read
-
-                //StreamReader sr = new StreamReader(file);
-                //sr.ReadToEnd();
-
-                string text = File.ReadAllText(file);
-
                 Thread thread = new Thread(TextAnalyse);
                 thread.Start(statistic);
                 //Task.Run(() => TextAnalyse(text, statistic));
@@ -40,7 +45,6 @@ namespace _06_practice_1
         static void TextAnalyse(object stat)
         {
             // text analyse how many letters, digits etc.
-
         }
     }
 }
